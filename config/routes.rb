@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'spotifies/show'
+  get 'integrations/show'
+  get 'integrations/index'
 
+  get 'spotifies/show'
   get 'spotifies/index'
 
   get 'beers/index'
-
   get 'beers/show'
 
   # The priority is based upon order of creation: first created -> highest priority.

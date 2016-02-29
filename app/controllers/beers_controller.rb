@@ -1,4 +1,5 @@
 class BeersController < ApplicationController
+attr_reader :beer
   def index
     @beer = Beer.new(abv: params[:abv])
     beer_names = []
