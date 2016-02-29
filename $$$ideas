@@ -1,0 +1,60 @@
+trials around you - trail api
+
+songs from the area around trail - spotify
+songs for difficulty of trails
+songs based on duration of trails
+
+nutrition info
+
+imgur base url
+https://api.imgur.com/3/
+
+beer base url
+http://api.brewerydb.com/v2/
+http://api.brewerydb.com/v2/?key=BEER_KEY
+gem install brewery_db
+brewery_db = BreweryDB::Client.new do |config|
+  config.api_key = ENV[BEER_KEY]
+end
+
+beer options
+brewery_db.beers.all(abv: '5.5')
+brewery_db.beers.find('vYlBZQ')
+brewery_db.beers.random
+
+brewery_db.breweries.all(established: 2006)
+brewery_db.breweries.find('d1zSa7')
+
+brewery_db.brewery('d1zSa7').beers
+
+brewery_db.categories.all
+brewery_db.categories.find(1)
+
+brewery_db.fermentables.all(country: 'Brazil')
+brewery_db.fermentables.find(1924)
+
+brewery_db.fluid_size.all
+brewery_db.fluid_size.find(1)
+
+brewery_db.glassware.all
+brewery_db.glassware.find(1)
+
+brewery_db.hops.all
+brewery_db.hops.find(1)
+
+brewery_db.search.all(q: 'IPA')
+brewery_db.search.beers(q: 'IPA')
+brewery_db.search.breweries(q: 'IPA')
+brewery_db.search.guilds(q: 'IPA')
+brewery_db.search.events(q: 'IPA')
+brewery_db.search.upc(code: '030613000043')
+
+brewery_db.styles.all
+brewery_db.styles.find(1)
+
+brewery_db.locations.all(locality: 'San Francisco')
+
+brewery_db.yeasts.all
+brewery_db.yeasts.find(1836)
+
+brewery_db.menu.beer_availability
